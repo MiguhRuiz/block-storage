@@ -1,0 +1,37 @@
+{
+  "name": "block-storage",
+  "version": "1.0.0",
+  "description": "A simple way to connect to Digital Ocean's Volumes API",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguhRuiz/block-storage.git"
+  },
+  "keywords": [
+    "digitalocean",
+    "digital-ocean",
+    "volumes",
+    "block",
+    "storage",
+    "block-storage",
+    "digital",
+    "ocean",
+    "storage"
+  ],
+  "author": "Miguh Ruiz <miguhruiz@gmail.com> (https://miguhruiz.xyz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MiguhRuiz/block-storage/issues"
+  },
+  "homepage": "https://github.com/MiguhRuiz/block-storage#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "request-promise": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2"
+  }
+}
