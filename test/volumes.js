@@ -84,3 +84,12 @@ test('Detach a volume out of a droplet', async t => {
 
   t.is(body.action.type, 'detach_volume', 'The request has detached a volume out of a droplet')
 })
+
+test('DELETE a single volume', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+
+  let body = await volumes.delete(volumeId)
+
+  t.pass()
+})
