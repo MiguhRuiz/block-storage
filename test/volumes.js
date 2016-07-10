@@ -53,7 +53,14 @@ test('POST a volume', async t => {
   let fixture = fixtures.getVolume()
   let body = await volumes.create(data)
 
-  console.log(body)
-  t.pass()
-  //t.truthy(body.createdAt)
+  t.deepEqual(body.volume.name, data.name)
+})
+
+test('GET actions of a single volume', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+
+  let body = await volumes.actions(volumeId)
+
+  t.is(typeof body.meta.total, 'number', 'body.metal.total exists')
 })
