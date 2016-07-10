@@ -40,3 +40,20 @@ test('GET a single volume', async t => {
 
   t.deepEqual(body, fixture)
 })
+
+test('POST a volume', async t => {
+  let volumes = t.context.volumes
+  let data = {
+    "size_gigabytes": 10,
+    "name": "example",
+    "description": "An awersome Block Storage",
+    "region": "nyc1"
+  }
+
+  let fixture = fixtures.getVolume()
+  let body = await volumes.create(data)
+
+  console.log(body)
+  t.pass()
+  //t.truthy(body.createdAt)
+})
