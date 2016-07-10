@@ -30,3 +30,13 @@ test('GET volumes', async t => {
 
   t.deepEqual(body, fixture)
 })
+
+test('GET a single volume', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+
+  let fixture = fixtures.getVolume()
+  let body = await volumes.get(volumeId)
+
+  t.deepEqual(body, fixture)
+})
