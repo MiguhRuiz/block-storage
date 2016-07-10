@@ -10,7 +10,6 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
 
 ## Table of Concepts
 
-- [Table of Concepts](#table-of-concepts)
 - [Installation](#installation)
 - [Authentication: Bearer Token](#authentication-bearer-token)
 - [Available resources and methods(API)](#available-resources-and-methodsapi)
