@@ -14,6 +14,12 @@ test('Client', async t => {
   let volumes = t.context.volumes
 
   t.is(typeof volumes.list, 'function', 'list is a function')
+  t.is(typeof volumes.create, 'function', 'create is a function')
+  t.is(typeof volumes.get, 'function', 'get is a function')
+  t.is(typeof volumes.delete, 'function', 'delete is a function')
+  t.is(typeof volumes.attach, 'function', 'attach is a function')
+  t.is(typeof volumes.detach, 'function', 'detach is a function')
+  t.is(typeof volumes.actions, 'function', 'actions is a function')
 })
 
 test('LIST volumes', async t => {
