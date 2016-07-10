@@ -64,3 +64,13 @@ test('GET actions of a single volume', async t => {
 
   t.is(typeof body.meta.total, 'number', 'body.metal.total exists')
 })
+
+test('Attach a volume into a droplet', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+  let dropletId = config.test.droplet
+
+  let body = await volumes.attach(volumeId, dropletId)
+
+  t.is(body.action.type, 'attach_volume', 'The request has attached a volume into a droplet')
+})
