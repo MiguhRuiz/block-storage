@@ -74,3 +74,13 @@ test('Attach a volume into a droplet', async t => {
 
   t.is(body.action.type, 'attach_volume', 'The request has attached a volume into a droplet')
 })
+
+test('Detach a volume out of a droplet', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+  let dropletId = config.test.droplet
+
+  let body = await volumes.detach(volumeId, dropletId)
+
+  t.is(body.action.type, 'detach_volume', 'The request has detached a volume out of a droplet')
+})
