@@ -22,7 +22,7 @@ test('Client', async t => {
   t.is(typeof volumes.actions, 'function', 'actions is a function')
 })
 
-test('LIST volumes', async t => {
+test('GET volumes', async t => {
   let volumes = t.context.volumes
 
   let fixture = fixtures.getVolumes()
