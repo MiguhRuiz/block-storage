@@ -20,6 +20,7 @@ test('Client', async t => {
   t.is(typeof volumes.attach, 'function', 'attach is a function')
   t.is(typeof volumes.detach, 'function', 'detach is a function')
   t.is(typeof volumes.actions, 'function', 'actions is a function')
+  t.is(typeof volumes.resize, 'function', 'resize is a function')
 })
 
 test('GET volumes', async t => {
@@ -92,4 +93,13 @@ test('DELETE a single volume', async t => {
   let body = await volumes.delete(volumeId)
 
   t.pass()
+})
+
+test('Resize a single volume', async t => {
+  let volumes = t.context.volumes
+  let volumeId = config.test.id
+
+  let body = await volumes.resize(volumeId, 2)
+
+  t.is(body.action.type, 'resize_volume', 'The request has resised the selected volume')
 })
