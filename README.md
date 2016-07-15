@@ -20,6 +20,7 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
   - [volumes.attach()](#volumesattach)
   - [volumes.detach()](#volumesdetach)
   - [volumes.delete()](#volumesdelete)
+  - [volumes.resize()](#volumesresize)
 - [Ussage](#ussage)
   - [Using callbacks](#using-callbacks)
   - [Using `async` functions(ES7/ES2016)](#using-async-functionses7es2016)
@@ -141,6 +142,19 @@ Deletes a single volume.
 ```js
 
 volumes.delete(volumeId)
+
+```
+
+#### volumes.resize()
+
+Resizes a single volume.
+
+```js
+
+volumes.resize(volumeId, gigabytes, (err, obj) => {
+  if (err) console.log(err)
+  console.log(obj)
+})
 
 ```
 
