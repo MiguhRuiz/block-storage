@@ -23,7 +23,7 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
   - [volumes.resize()](#volumesresize)
 - [Ussage](#ussage)
   - [Using callbacks](#using-callbacks)
-  - [Using promises([#1](https://github.com/MiguhRuiz/block-storage/issues/1))](#using-promises1httpsgithubcommiguhruizblock-storageissues1)
+  - [Using promises([#1](https://github.com/MiguhRuiz/block-storage/issues/1))](#using-promises1)
   - [Using `async` functions(ES7/ES2016)](#using-async-functionses7es2016)
 - [License MIT](#license-mit)
 
