@@ -23,6 +23,7 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
   - [volumes.resize()](#volumesresize)
 - [Ussage](#ussage)
   - [Using callbacks](#using-callbacks)
+  - [Using promises([#1](https://github.com/MiguhRuiz/block-storage/issues/1))](#using-promises1httpsgithubcommiguhruizblock-storageissues1)
   - [Using `async` functions(ES7/ES2016)](#using-async-functionses7es2016)
 - [License MIT](#license-mit)
 
@@ -170,6 +171,22 @@ volumes.get(volumeId, (err, volume) => {
 })
 
 ```
+#### Using promises([#1](https://github.com/MiguhRuiz/block-storage/issues/1))
+
+```js
+
+volumes
+    .get(volumeId)
+    .then((volume) => {
+        console.log(volume)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+
+```
+
+*See a full example of the ussage of promises on [Tonic](https://tonicdev.com/57cb105a0540e114006f2eda/57cb13534bcf3f140022107b). You will need a valid Digital Ocean API token to run the example.*
 
 #### Using `async` functions(ES7/ES2016)
 
